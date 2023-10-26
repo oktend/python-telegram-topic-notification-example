@@ -38,7 +38,7 @@ def main():
         os.getenv("TELEGRAM_NOTIFICATION_CHAT_ID"),
         os.getenv("REPLY_TO_MESSAGE_ID"),
         )
-    log.info(f"this message level: info") # When you run the script, only alerts with choosen level (line 33) and higher will be sent to telegram chat
+    log.info(f"this message level: info") # When you run the script, only alerts with choosen level (line 28) and higher will be sent to telegram chat
     log.debug(f"this message level: debug")
     log.warning(f"this message level: warning")
     log.error(f"this message level: error")
