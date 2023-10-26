@@ -1,7 +1,7 @@
 # python-telegram-topic-notification-example
 
 see main.py line 28, there you can set the log level
-see main.py line 41-45, only alerts with choosen level (33 line) and higher will be sent to telegram chat
+see main.py line 41-45, only alerts with choosen level (28 line) and higher will be sent to telegram chat
 
 to run main.py you should:
 
