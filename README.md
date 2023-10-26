@@ -9,11 +9,14 @@ open console pressing ctrl + shift + ~
 
 # then run commands
 $ poetry install
+
 $ poetry shell 
 
 # then export credentials
 $ export TELEGRAM_NOTIFICATION_BOT_TOKEN=<bot_token>
+
 $ export TELEGRAM_NOTIFICATION_CHAT_ID=<chat_id>
+
 $ export REPLY_TO_MESSAGE_ID=<message_id>
 
 
