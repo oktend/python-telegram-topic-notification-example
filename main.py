@@ -11,7 +11,7 @@ https://docs.python.org/3/howto/logging.html#configuring-logging
 
 log = logging.getLogger('main')
 
-def init_logger(telegram_chat_token, telegram_chat_id, telegram_reply_to_message):
+def init_logger(telegram_bot_token, telegram_chat_id, telegram_message_thread_id):
 
     log.setLevel(logging.DEBUG)
 
@@ -24,7 +24,7 @@ def init_logger(telegram_chat_token, telegram_chat_id, telegram_reply_to_message
 
     log.addHandler(stream_handler)
 
-    telegram_handler = TelegramHandler(level=logging.WARNING, token=telegram_chat_token, reply_to_message_id=telegram_reply_to_message, chat_id=telegram_chat_id)
+    telegram_handler = TelegramHandler(level=logging.WARNING, token=telegram_bot_token, chat_id=telegram_chat_id, message_thread_id=telegram_message_thread_id)
     telegram_handler.setLevel(logging.WARNING) # logging.WARNING sets the log level you will recieve in telegram chat to level WARNING and higher
 
     formatter = HtmlFormatter()
@@ -36,7 +36,7 @@ def main():
     init_logger(
         os.getenv("TELEGRAM_NOTIFICATION_BOT_TOKEN"),
         os.getenv("TELEGRAM_NOTIFICATION_CHAT_ID"),
-        os.getenv("REPLY_TO_MESSAGE_ID"),
+        os.getenv("TELEGRAM_MESSAGE_THREAD_ID"),
         )
     log.info(f"this message level: info") # When you run the script, only alerts with choosen level (line 28) and higher will be sent to telegram chat
     log.debug(f"this message level: debug")

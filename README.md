@@ -13,7 +13,7 @@ poetry shell
 
 export TELEGRAM_NOTIFICATION_BOT_TOKEN=<bot_token>
 export TELEGRAM_NOTIFICATION_CHAT_ID=<chat_id>
-export REPLY_TO_MESSAGE_ID=<message_id>
+export TELEGRAM_MESSAGE_THREAD_ID=<message_id>
 
 python main.py
 ```
